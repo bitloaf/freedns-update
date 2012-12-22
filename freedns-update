@@ -69,10 +69,10 @@ do
             echo $STATUS | grep -iq "error: address \($IPREGEX\) has not
                 changed" &&
                 { echo >&2 "Address ${bold}$1${normal} has not changed"; shift; continue; }
-            echo "${bold}$1${normal} changed to ${bold}$IP${normal}";
+            echo "${bold}$1${normal} changed to ${bold}${PUBLICIP}${normal}";
         else
             # IP address already stored at freedns.afraid.org
-            echo "${bold}$1${normal} already set to ${bold}$IP${normal}";
+            echo "${bold}$1${normal} already set to ${bold}${PUBLICIP}${normal}";
         fi
 
     # no matches for domain
